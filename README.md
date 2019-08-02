@@ -1,4 +1,4 @@
-# unitia-builder
+# unitia
 
 > A Vue.js project
 
