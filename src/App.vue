@@ -6,7 +6,6 @@
       <b-nav tabs justfied>
         <b-nav-item class="active" to="/HelloWorld">Home</b-nav-item>
         <b-nav-item to="/Todo">Todo</b-nav-item>
-        <b-nav-item disabled>Link with a long name </b-nav-item>
         <b-nav-item disabled>Disabled</b-nav-item>
       </b-nav>
     </div>
