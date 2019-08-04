@@ -11,16 +11,13 @@
           </div>
       </b-field>
     </div>
-    <div class="panel-tabs control">
-      <a class="is-active">All</a>
-      <a>Active</a>
-      <a>Completed</a>
-    </div>
+    <div class="panel-list-item control">
       <b-field v-for="item in items" v-bind:key="item.title" class="panel-block">
           <label v-bind:class="{ done: isChecked }">
             <b-checkbox type="checkbox" v-model="item.isChecked" aria-hidden="true">{{ item.title }}</b-checkbox>
           </label>
       </b-field>
+      </div>
     </nav>
   </div>
 </template>
