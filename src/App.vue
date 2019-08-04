@@ -2,8 +2,8 @@
   <div id="app">
     <b-navbar>
       <template slot="end">
-        <b-navbar-item tag="router-link" to="HelloWorld">
-          HelloWorld
+        <b-navbar-item tag="router-link" to="HowtoTodo">
+          HowtoTodo
         </b-navbar-item>
         <b-navbar-item tag="router-link" to="Todo">
           Todo
