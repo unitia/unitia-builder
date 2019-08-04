@@ -1,21 +1,27 @@
 <template>
   <div>
-    <h2 class="title">Vue Todo</h2>
-    <div class="columns">
-      <b-field class="column is-4">
-        <b-input placeholder="TodoText" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" class="column"></b-input>
-        <div class="buttons">
-        <b-button v-on:click="addTodoItem()">Add</b-button>
-        <b-button v-on:click="deleteTodoItem()">Delete</b-button>
-        </div>
+    <nav class="panel">
+      <p class="panel-heading">Vue Todo</p>
+    <div class="panel-block">
+      <b-field grouped>
+        <input placeholder="TodoText" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" type="text" class="input" />
+          <div class="control">
+            <b-button v-on:click="addTodoItem()" expanded>Add</b-button>
+            <b-button v-on:click="deleteTodoItem()" expanded>Delete</b-button>
+          </div>
       </b-field>
     </div>
-    <b-field v-for="item in items" v-bind:key="item.title" grouped>
-
-      <label v-bind:class="{ done: isChecked }">
-        <b-checkbox type="checkbox" v-model="item.isChecked">{{ item.title }}</b-checkbox>
-      </label>
-    </b-field>
+    <div class="panel-tabs control">
+      <a class="is-active">All</a>
+      <a>Active</a>
+      <a>Completed</a>
+    </div>
+      <b-field v-for="item in items" v-bind:key="item.title" class="panel-block">
+          <label v-bind:class="{ done: isChecked }">
+            <b-checkbox type="checkbox" v-model="item.isChecked" aria-hidden="true">{{ item.title }}</b-checkbox>
+          </label>
+      </b-field>
+    </nav>
   </div>
 </template>
 
