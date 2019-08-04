@@ -5,10 +5,9 @@ import App from './App'
 import router from './router'
 import VueLocalStorage from 'vue-ls'
 /* ここから */
-import BootstrapVue from 'bootstrap-vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-Vue.use(BootstrapVue)
+import Buefy from 'buefy'
+import 'buefy/dist/buefy.css'
+Vue.use(Buefy)
 
 Vue.use(VueLocalStorage)
 /* ここまで */

@@ -1,19 +1,21 @@
 <template>
   <div>
-    <h2>Vue Todo</h2>
-    <b-form inline>
-      <label class="sr-only" for="inline-form-input-name">Name</label>
-      <b-input class="mb-2 mr-sm-2 mb-sm-0" placeholder="Todo Text" v-model="newTodoItem" v-on:keyup.enter="addTodoItem"></b-input>
-      <b-button v-on:click="addTodoItem()">Add</b-button>
-      <b-button v-on:click="deleteTodoItem()">Delete</b-button>
-    </b-form>
-    <p></p>
-    <b-form v-for="item in items" v-bind:key="item.title">
+    <h2 class="title">Vue Todo</h2>
+    <div class="columns">
+      <b-field class="column is-4">
+        <b-input placeholder="TodoText" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" class="column" rounded></b-input>
+        <div class="buttons">
+        <b-button v-on:click="addTodoItem()">Add</b-button>
+        <b-button v-on:click="deleteTodoItem()">Delete</b-button>
+        </div>
+      </b-field>
+    </div>
+    <b-field v-for="item in items" v-bind:key="item.title" grouped>
 
       <label v-bind:class="{ done: isChecked }">
-        <b-form-checkbox type="checkbox" class="mb-2 mr-sm-2 mb-sm-0" v-model="item.isChecked">{{ item.title }}</b-form-checkbox>
+        <b-checkbox type="checkbox" v-model="item.isChecked">{{ item.title }}</b-checkbox>
       </label>
-    </b-form>
+    </b-field>
   </div>
 </template>
 
