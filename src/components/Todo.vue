@@ -3,7 +3,7 @@
     <h2 class="title">Vue Todo</h2>
     <div class="columns">
       <b-field class="column is-4">
-        <b-input placeholder="TodoText" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" class="column" rounded></b-input>
+        <b-input placeholder="TodoText" v-model="newTodoItem" v-on:keyup.enter="addTodoItem" class="column"></b-input>
         <div class="buttons">
         <b-button v-on:click="addTodoItem()">Add</b-button>
         <b-button v-on:click="deleteTodoItem()">Delete</b-button>
